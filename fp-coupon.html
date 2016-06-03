@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>商品详情页1</title>
+		<title>支付完成页-优惠券</title>
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
@@ -11,10 +11,20 @@
 				<img class="rn-i-img pull-right" src="img/back.png"  />
 			</header>
 			<section class="rn-i-section">
-				<p class="rn-i-p">购买本商品即可获得更多优惠</p>
+				<div class="col-sm-1">
+					<img class="img-responsive" src="img/success.jpg" />
+				</div>
+				<div class="col-sm-11 mt10">
+					<p>恭喜您获得独享限时特惠，一定要保存哦！</p>
+				</div>
+				<div class="col-sm-12 mt10 mb10">
+					<button class="btn rn-fc-btn1 mr10" id="btn1">优惠券</button>
+					<button class="btn rn-fc-btn2" id="btn2">特价单品</button>
+				</div>
 			</section>
 			<section>
 				<ul>
+					<div class="clearfix" id="hide">
 					<li class="col-sm-12 clearfix pull-left pd10">
 						<div class="col-sm-3 rn-i-div2 clearfix">
 							<img class="img-responsive" src="img/bg.jpg"  />
@@ -54,6 +64,7 @@
 							<img class="img-responsive" src="img/logo3.jpg" />
 						</div>
 					</li>
+					</div>
 					<li class="col-sm-12 clearfix pull-left pd10 borderTop">
 						<div class="col-sm-3 border rn-i-div5 clearfix">
 							<center><img class="img-responsive" src="img/cup.jpg"  /></center>
@@ -101,12 +112,30 @@
 					</li>
 				</ul>
 			</section>
-			<footer class="rn-i-footer">
-				<p>领取步骤：</p>
-				<p>第一步：本地购买商品并且完成支付；</p>
-				<p>第二步：在支付完成页面领取优惠券和选择特惠商品；</p>
-				<p>第三步：去合作商家使用。</p>
-			</footer>
 		</div>
 	</body>
+	<script>
+		window.onload = function(){
+			var btn1 = document.getElementById('btn1');
+			var btn2 = document.getElementById('btn2');
+			var hide = document.getElementById('hide')
+			btn1.onclick = function(){
+				btn1.style.backgroundColor = "#D91648";
+				btn1.style.color = "#fff";
+				btn2.style.backgroundColor = "#fff";
+				btn2.style.border = "1px solid #D91648";
+				btn2.style.color = "#3d4245";
+				hide.style.display = "block";
+			};
+			
+			btn2.onclick = function(){
+				btn2.style.backgroundColor = "#D91648";
+				btn2.style.color = "#fff";
+				btn1.style.color = '#3d4245';
+				btn1.style.backgroundColor = "#fff";
+				btn1.style.border = "1px solid #D91648";
+				hide.style.display = "none";
+			}
+		}
+	</script>
 </html>
