@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="robots" content="all"/>
+	    <meta name="Copyright" content=""/>
+	    <meta name="viewport" content="initial-scale=1, user-scalable=no"/>
+	    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	    <meta name="format-detection" content="telephone=no, email=no"/>
+	    <meta name="msapplication-tap-highlight" content="no">
+	    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+		<title>商品详情页1</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div class="main">
+			<header class="rn-i-header">
+				<img class="rn-i-img pull-right" src="img/back.png"  />
+			</header>
+			<section class="rn-i-section">
+				<div class="col-sm-2 pd0">
+					<img class="img-responsive" src="img/success.jpg" />
+				</div>
+				<div class="col-sm-10">
+					<p class="fs16">恭喜您!</p>
+					<p class="fs16">已获得限时优惠券</p>
+				</div>
+			</section>
+			<section class="clearfix">
+				<div class="col-sm-12 mt10 borderTop pt10">
+					<p>麦包包优惠券，500元通用券</p>
+					<p>优惠券代码：</p>
+					<p><span class="fs12">YHJC9Xw5jfX9HPs</span><span class="ml10 fc_red">复制代码</span></p>
+					<p>或发送到手机：</p>
+				</div>
+				<div class="col-sm-12 mt5 pr0">
+					<div class="col-sm-6 rn-gc-input pd0">
+						<input class="col-sm-12" id="input1" type="text" placeholder="请输入你的手机"/>
+					</div>
+					<div class="rn-gc-btn3 col-sm-3">
+						<button class="rn-gc-btn" onclick="checkPhone()">确定</button>
+					</div>
+					<span class="col-sm-3 mt10 none pd0 ml5 pd0" id="hide">格式错误！</span>
+				</div>
+				<div class="col-sm-12 mt10">
+					<div class="col-sm-6 rn-gc-btn2 pd0">
+						<button class="col-sm-12 text-center pd0">到合作商家使用优惠券</button>
+					</div>
+					<div class="col-sm-1 rn-gc-img pd0">
+					<img class="img-responsive" src="img/triangle.png" />
+					</div>
+					<div class="ml30">
+						<p class="mt10">手机扫码购物：</p>
+					</div>
+				</div>
+			</section>
+			<section class="borderTop mt10 pt10">
+				<div class="col-sm-12 ml15 pd0">
+					<img class="img-responsive" src="img/package.jpg" />
+					<p class="fs16 mt10">使用说明：</p>
+					<p>有效期：2015-12-01至2016-06-31</p>
+					<p>各类商品都支持使用！</p>
+					<p class="fs16 mt10">如何使用：</p>
+					<img class="img-responsive pr10" src="img/example.jpg" />
+				</div>
+			</section>
+		</div>
+	</body>
+	<script>
+		function checkPhone(){
+			var input1 = document.getElementById('input1');
+			var hide = document.getElementById("hide");
+			var pattern = /^(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+			if(!(pattern.test(input1.value))){
+				hide.style.display = "block";
+				input1.style.border = "1px solid #d91648"
+			}else{
+				hide.style.display = "none";
+				input1.style.border = "";
+			}
+		}
+	</script>
+</html>

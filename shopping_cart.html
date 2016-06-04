@@ -2,7 +2,16 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="robots" content="all"/>
+	    <meta name="Copyright" content=""/>
+	    <meta name="viewport" content="initial-scale=1, user-scalable=no"/>
+	    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	    <meta name="format-detection" content="telephone=no, email=no"/>
+	    <meta name="msapplication-tap-highlight" content="no">
+	    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
 		<title>购物车</title>
+		<link rel="stylesheet" href="css/swiper.min.css" />
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
@@ -12,36 +21,53 @@
 				<img class="rn-i-img pull-right" src="img/back.png"  />
 			</header>
 			<section>
-				<div class="col-sm-4 rn-sc-div2">
-					<label class=" clearfix">
-					<div class="rn-sc-div1">
-						<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
-					</div>
-					<input class="rn-sc-radio" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					</label>
-					<p>半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒500ml</p>
-					<p><span>￥0</span><i>￥30</i></p>
-				</div>
-				<div class="col-sm-4 rn-sc-div2">
-					<label class=" clearfix">
-					<div class="rn-sc-div1">
-						<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
-					</div>
-					<input class="rn-sc-radio" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					</label>
-					<p>半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒500ml</p>
-					<p><span>￥0</span><i>￥30</i></p>
-				</div>
-				<div class="col-sm-4 rn-sc-div2">
-					<label class=" clearfix">
-					<div class="rn-sc-div1">
-						<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
-					</div>
-					<input class="rn-sc-radio" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					</label>
-					<p>半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒500ml</p>
-					<p><span>￥0</span><i>￥30</i></p>
-				</div>
+				<div class="swiper-container">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide col-sm-4 pd0">
+					        	<div class=" rn-sc-div2">
+					        		<div class="rn-sc-radio rn-sc-radio-active"></div>
+									<div class="rn-sc-div1">
+										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
+									</div>
+									<p class="fs12">半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒500ml</p>
+									<p><span>￥0</span><i>￥30</i></p>
+							    </div>
+				       </div>
+				       
+				       <div class="swiper-slide col-sm-4 pd0">
+					        	<div class=" rn-sc-div2">
+					        		<div class="rn-sc-radio"></div>
+									<div class="rn-sc-div1">
+										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
+									</div>
+									<p class="fs12">半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒500ml</p>
+									<p><span>￥0</span><i>￥30</i></p>
+							    </div>
+				       </div>
+				       
+				       <div class="swiper-slide col-sm-4 pd0" >
+					        	<div class=" rn-sc-div2">
+					        		<div class="rn-sc-radio"></div>
+									<div class="rn-sc-div1">
+										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
+									</div>
+									<p class="fs12">半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒500ml</p>
+									<p><span>￥0</span><i>￥30</i></p>
+							    </div>
+				       </div>
+				       <div class="swiper-slide col-sm-4 pd0" >
+					        	<div class=" rn-sc-div2">
+					        		<div class="rn-sc-radio"></div>
+									<div class="rn-sc-div1">
+										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
+									</div>
+									<p class="fs12">半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒500ml</p>
+									<p><span>￥0</span><i>￥30</i></p>
+							    </div>
+				       </div>
+				    </div>
+				</div>  
+				 
 			</section>
 			<footer class="rn-sc-div5">
 				<div class="col-sm-8 rn-sc-div3 text-center">
@@ -53,4 +79,28 @@
 			</footer>
 		</div>
 	</body>
+	<script type="text/javascript" src="js/swiper.min.js" ></script>
+	<script>
+	    var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        slidesPerView: 3,
+	        paginationClickable: true,
+	        spaceBetween: 0,
+	        freeMode: true
+	    });
+
+		var radio = document.getElementsByClassName('rn-sc-radio');	
+		console.log(radio)		
+		for(var item in radio){
+			console.log(radio[item])
+			radio[item].addEventListener('click',function(){
+			if(this.className.indexOf('rn-sc-radio-active') != -1){
+				this.className = 'rn-sc-radio';
+			}else{
+				this.className = 'rn-sc-radio rn-sc-radio-active';
+			}
+		},false);
+		}
+		
+    </script>
 </html>

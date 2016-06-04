@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="robots" content="all"/>
+	    <meta name="Copyright" content=""/>
+	    <meta name="viewport" content="initial-scale=1, user-scalable=no"/>
+	    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	    <meta name="format-detection" content="telephone=no, email=no"/>
+	    <meta name="msapplication-tap-highlight" content="no">
+	    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
+		<title>订单查看页</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<div class="main">
+			<section class="rn-i-section">
+				<div class="col-sm-12 mt10 mb10">
+					<button class="btn rn-btn-active mr10" id="btn1" onclick='setTabs("btn", 1, 3)'>赠送商品</button>
+					<button class="btn rn-fc-btn1 mr10" id="btn2" onclick='setTabs("btn", 2, 3)'>优惠券</button>
+					<button class="btn rn-fc-btn1 mr10" id="btn3" onclick='setTabs("btn", 3, 3)'>特价单品</button>
+				</div>
+			</section>
+			<section>
+				<ul>
+					<!--tab1-->
+					<div class="clearfix block" id="tab1">
+						<li class="col-sm-12 clearfix pull-left pd10 borderTopRed">
+						<p class="fs16 mb10">您已获得的赠品</p>
+						<div class="col-sm-4 border rn-i-div5 clearfix pd0">
+							<center><img class="img-responsive" src="img/cup.jpg"  /></center>
+						</div>
+						<div class="col-sm-6 rn-i-div6">
+							<p class="fs12">车载杯！大口径便携真空保温杯（300ml）</p>
+							<div class="rn-i-div4 fs12">
+							<p class="rn-i-p3">剩余：2天</p>
+							<p class="rn-i-p4"><i>￥358</i><span>￥485</span></p>
+							</div>
+						</div>
+						<div class="col-sm-2 pull-right pd0">
+							<img class="img-responsive" src="img/logo4.jpg" />
+						</div>
+					</li>
+					</div>
+					
+					<!--tab2-->
+					<div class="clearfix none" id="tab2">
+					<li class="col-sm-12 clearfix pull-left pd10 borderTopRed">
+						<p class="fs16 mb10 ml10">领取超值优惠券</p>
+						<div class="col-sm-4 rn-i-div2 clearfix pd0">
+							<img class="img-responsive h100" src="img/bg.jpg"  />
+							<img class="img-responsive rn-wo-img" src="img/get.png" />
+							<p class="text-center">￥<span>500</span>代金券</p>
+						</div>
+						<div class="col-sm-6 rn-i-div3">
+							<p>优惠网优惠券，500元通用券</p>
+							<p class="rn-i-p2">剩余：2天</p>
+						</div>
+						<div class="col-sm-2  pull-right rn-wo-div1 pd0">
+							<center><img class="img-responsive" src="img/logo1.jpg" /></center>
+							<center><button class="btn rn-wo-btn" disabled="disabled">立即领取</button></center>
+						</div>
+					</li>
+					<li class="col-sm-12 clearfix pull-left pd10 borderTop">
+						<div class="col-sm-4 rn-i-div2 clearfix pd0">
+							<img class="img-responsive h100" src="img/bg.jpg"  />
+							<img class="img-responsive rn-wo-img" src="img/get.png" />
+							<p class="text-center">满<span>200</span>减<span>20</span></p>
+						</div>
+						<div class="col-sm-6 rn-i-div3">
+							<p>优惠网优惠券，500元通用券</p>
+							<p class="rn-i-p2">剩余：2天</p>
+						</div>
+						<div class="col-sm-2  pull-right rn-wo-div1 pd0">
+							<center><img class="img-responsive" src="img/logo2.jpg" /></center>
+							<center><button class="btn rn-wo-btn" disabled="disabled">立即领取</button></center>
+						</div>
+					</li>
+					<li class="col-sm-12 clearfix pull-left pd10 borderTop">
+						<div class="col-sm-4 rn-i-div2 clearfix pd0">
+							<img class="img-responsive h100" src="img/bg.jpg"  />
+							<p class="text-center">￥<span>500</span>代金券</p>
+						</div>
+						<div class="col-sm-6 rn-i-div3">
+							<p>优惠网优惠券，500元通用券</p>
+							<p class="rn-i-p2">剩余：2天</p>
+						</div>
+						<div class="col-sm-2  pull-right rn-wo-div1 pd0">
+							<center><img class="img-responsive" src="img/logo3.jpg" /></center>
+							<center><button class="btn rn-wo-btn2">立即领取</button></center>
+						</div>
+					</li>
+					</div>
+					
+					<!--tab3-->
+					<div class="clearfix none" id="tab3">
+						<li class="col-sm-12 clearfix pull-left pd10 borderTopRed">
+							<p class="fs16 mb10">尊享限时特价单品购买权</p>
+							<div class="col-sm-4 border rn-i-div5 clearfix pd0">
+							<center><img class="img-responsive" src="img/cup.jpg"  /></center>
+						</div>
+						<div class="col-sm-6 rn-i-div6">
+							<p class="fs12">车载杯！大口径便携真空保温杯（300ml）</p>
+							<div class="rn-i-div4 fs12">
+							<p class="rn-i-p3">剩余：2天</p>
+							<p class="rn-i-p4"><i>￥358</i><span>￥485</span></p>
+							</div>
+						</div>
+						<div class="col-sm-2 pull-right pd0">
+							<img class="img-responsive" src="img/logo4.jpg" />
+						</div>
+						</li>
+						<li class="col-sm-12 clearfix pull-left pd10 borderTop">
+							<div class="col-sm-4 border rn-i-div5 clearfix pd0">
+							<center><img class="img-responsive" src="img/love.jpg"  /></center>
+						</div>
+						<div class="col-sm-6 rn-i-div6">
+							<p class="fs12">车载杯！大口径便携真空保温杯（300ml）</p>
+							<div class="rn-i-div4 fs12">
+							<p class="rn-i-p3">剩余：2天</p>
+							<p class="rn-i-p4"><i>￥358</i><span>￥485</span></p>
+							</div>
+						</div>
+						<div class="col-sm-2 pull-right pd0">
+							<img class="img-responsive" src="img/logo5.jpg" />
+						</div>
+						</li>
+						<li class="col-sm-12 clearfix pull-left pd10 borderTop">
+							<div class="col-sm-4 border rn-i-div5 clearfix pd0">
+							<center><img class="img-responsive" src="img/phone.jpg"  /></center>
+						</div>
+						<div class="col-sm-6 rn-i-div6">
+							<p class="fs12">车载杯！大口径便携真空保温杯（300ml）</p>
+							<div class="rn-i-div4 fs12">
+							<p class="rn-i-p3">剩余：2天</p>
+							<p class="rn-i-p4"><i>￥358</i><span>￥485</span></p>
+							</div>
+						</div>
+						<div class="col-sm-2 pull-right pd0">
+							<img class="img-responsive" src="img/logo6.jpg" />
+						</div>
+						</li>
+					</div>
+				</ul>
+			</section>
+		</div>
+	</body>
+	<script>
+		function setTabs(name, m, n){
+			for(var i = 1; i <= n; i++){
+				var menu = document.getElementById(name + i);
+				var showDiv = document.getElementById("tab" + i);
+				menu.className = i == m ? "rn-btn-active btn mr10" : "rn-fc-btn1 btn mr10";
+				showDiv.style.display = i == m ? "block" : "none";
+			}
+		};
+	</script>
+</html>

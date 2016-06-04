@@ -111,46 +111,79 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 .fs16{font-size:1.6rem;}
 .fs14{font-size:1.4rem;}
 .fs12{font-size:1.2rem;}
+
 .pd10{padding:10px;}
+.pd0{padding:0px;}
+.pr0{padding-right:0px;}
+.pt10{padding-top:10px;}
+.pr10{padding-right:10px;}
+.mt5{margin-top: 5px;}
+.ml5{padding-left:5px;}
 .mt10{margin-top: 10px;}
 .mb10{margin-bottom: 10px;}
+.ml10{margin-left: 10px;}
+.ml15{margin-left: 15px;}
 .mr10{margin-right:10px;}
+.ml30{margin-left:-50px;}
+
 .borderTop{border-top:1px dashed #e4e4e4;}
+.borderTopRed{border-top: 1px solid #D91648;}
 .border{border:1px solid #e4e4e4;}
+.block{display: block;}
+.none{display: none;}
+.fc_red{color: #D91648;}
+.h100{height:100%}
 /*main*/
 /*商品详情页1*/
 .main{width:100%;height:100%;}
-.rn-i-header{width:100%;height:82px;background-color: #d91648;}
-.rn-i-p{color: #3d4245;font-size: 1.8rem;}
-.rn-i-section{padding:20px 20px;}
-.rn-i-img{top: 30px;right:20px;width:23px;height:23px;display: block;position: absolute;}
-.rn-i-div2{position: relative;display: block;overflow: hidden;}
+.rn-i-header{width:100%;height:42px;background-color: #d91648;}
+.rn-i-p{color: #3d4245;font-size: 1.6rem;}
+.rn-i-section{padding:10px;}
+.rn-i-img{top: 15px;right:10px;width:12px;height:12px;display: block;position: absolute;}
+.rn-i-div2{position: relative;display: block;height: 70px;}
 .rn-i-div2 img{z-index: -1;position: absolute;}
-.rn-i-div2 p{position: relative;color: #ca0d13;font-weight: bold;font-size: 1.8rem;z-index: 2;text-align: center;line-height: 130px;}
-.rn-i-div2 p span{font-size: 4.0rem;}
-.rn-i-div3{height: 126px;}
-.rn-i-div6{height: 160px;}
-.rn-i-div3 p{color: #575b5d;font-size: 1.8rem;position: relative;}
+.rn-i-div2 p{position: relative;color: #ca0d13;font-weight: bold;font-size: 1.4rem;z-index: 2;text-align: center;line-height: 70px;}
+.rn-i-div2 p span{font-size: 2rem;}
+.rn-i-div3{height: 70px;}
+.rn-i-div6{height: 80px;}
+.rn-i-div3 p{color: #575b5d;font-size: 1.2rem;position: relative;}
 .rn-i-div3 .rn-i-p2{position: absolute;bottom: 0;}
 .rn-i-div4{position: absolute;bottom: 0;}
-.rn-i-div4 p{font-size: 1.8rem;}
+.rn-i-div4 p{font-size: 1.4rem;}
 .rn-i-div4 .rn-i-p4 span{text-decoration:line-through;}
 .rn-i-div4 .rn-i-p4 i{color:#d91648;margin-right:10px;font-style: normal;}
-.rn-i-div5{height:160px;position: relative;}
-.rn-i-div5 img{height:140px;margin-top:5px;}
+.rn-i-div5{position: relative;height:80px}
+.rn-i-div5 img{height:70px;margin-top:5px;}
 .rn-i-footer {margin-left:10px;}
 
 /*购物车*/
-.rn-i-header p{color:#fff;line-height: 80px;font-size: 1.8rem;}
-.rn-sc-div2{padding: 10px;position: relative;z-index: -1;}
+.rn-i-header p{color:#fff;line-height: 42px;font-size: 1.6rem;}
+.rn-sc-div2{padding: 5px;position: relative;z-index: -1;}
 .rn-sc-div2 p span{color: #d91648;margin-right:10px;}
 .rn-sc-div2 p i{font-style: normal;text-decoration:line-through;}
-.rn-sc-radio{position: absolute;top:20px;right:20px}
-.rn-sc-div5{line-height:68px;}
-.rn-sc-div5 .rn-sc-div3{background-color: #bcbcbc;color: #fff;font-size: 1.8rem;}
+.rn-sc-div5{line-height:35px;}
+.rn-sc-div5 .rn-sc-div3{background-color: #bcbcbc;color: #fff;font-size: 1.6rem;}
 .rn-sc-div5 .rn-sc-div3 span{color: #d91648;}
-.rn-sc-div5 .rn-sc-div4{background-color: #d91648;font-size: 1.8rem;color: #fff;}
+.rn-sc-div5 .rn-sc-div4{background-color: #d91648;font-size: 1.6rem;color: #fff;}
 
 /*支付完成页-优惠券*/
-.rn-fc-btn1{background-color: #d91648;color: #fff;}
-.rn-fc-btn2{background-color: #fff;border: 1px solid #D91648;}
+.rn-btn-active{background-color: #d91648;color: #fff;}
+.rn-fc-btn1{background-color: #fff;border: 1px solid #D91648;}
+
+/*订单查看页*/
+.rn-wo-div1{height: 70px;position: relative;}
+.rn-wo-btn{background-color: #D91648;color: #333333;position: absolute;bottom:0px;right:0px;}
+.rn-wo-btn2{background-color: #D91648;color: #fff;position: absolute;bottom:0px;right:0px;}
+.rn-wo-img{width: 40%;height: 40%;}
+
+/*获取优惠券*/
+.rn-gc-btn{background-color: #D91648;color: #fff;}
+.rn-gc-btn2 button{background-color: #D91648;color: #fff;height: 33px;}
+.rn-gc-input input{line-height: 30px;outline: none;border: 1px solid #ccc;}
+.rn-gc-btn3 button{line-height: 30px;width:60px;}
+.rn-gc-img img{float: left;margin-left:-1px;height:33px}
+
+/*复选框样式*/
+.rn-sc-radio{position: absolute;top:10px;right:10px;display: inline-block;vertical-align: top;width: 15px;height: 15px;border-radius: 10px;border: 1px solid #ccc;}
+.rn-sc-radio-active{border: 1px solid #d91648;background-color: #D91648;color: #fff;font-size: 1.2rem;line-height: 15px;text-align: center;}
+.rn-sc-radio-active:after{content: '√';}

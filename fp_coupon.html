@@ -10,7 +10,7 @@
 	    <meta name="format-detection" content="telephone=no, email=no"/>
 	    <meta name="msapplication-tap-highlight" content="no">
 	    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"/>
-		<title>商品详情页1</title>
+		<title>支付完成页-优惠券</title>
 		<link rel="stylesheet" href="css/main.css" />
 	</head>
 	<body>
@@ -19,10 +19,20 @@
 				<img class="rn-i-img pull-right" src="img/back.png"  />
 			</header>
 			<section class="rn-i-section">
-				<p class="rn-i-p">购买本商品即可获得更多优惠</p>
+				<div class="col-sm-2 pd0">
+					<img class="img-responsive" src="img/success.jpg" />
+				</div>
+				<div class="col-sm-10">
+					<p>恭喜您获得独享限时特惠，一定要保存哦！</p>
+				</div>
+				<div class="col-sm-12 mt10 mb10 pd0">
+					<button class="btn rn-btn-active mr10" id="btn1" onclick='setTabs("btn", 1, 2)'>优惠券</button>
+					<button class="btn rn-fc-btn1" id="btn2" onclick='setTabs("btn", 2, 2)'>特价单品</button>
+				</div>
 			</section>
 			<section>
 				<ul>
+					<div class="clearfix block" id="hide">
 					<li class="col-sm-12 clearfix pull-left pd10">
 						<div class="col-sm-4 rn-i-div2 clearfix pd0">
 							<img class="img-responsive h100" src="img/bg.jpg"  />
@@ -62,8 +72,9 @@
 							<img class="img-responsive" src="img/logo3.jpg" />
 						</div>
 					</li>
-					<li class="col-sm-12 clearfix pull-left pd10 borderTop">
-						<div class="col-sm-4 border rn-i-div5 clearfix">
+					</div>
+					<li class="col-sm-12 clearfix pull-left  borderTop pd10">
+						<div class="col-sm-4 border rn-i-div5 clearfix pd0">
 							<center><img class="img-responsive" src="img/cup.jpg"  /></center>
 						</div>
 						<div class="col-sm-6 rn-i-div6">
@@ -78,14 +89,14 @@
 						</div>
 					</li>
 					<li class="col-sm-12 clearfix pull-left pd10 borderTop">
-						<div class="col-sm-4 border rn-i-div5 clearfix">
+						<div class="col-sm-4 border rn-i-div5 clearfix pd0">
 							<center><img class="img-responsive" src="img/love.jpg"  /></center>
 						</div>
 						<div class="col-sm-6 rn-i-div6">
 							<p class="fs12">车载杯！大口径便携真空保温杯（300ml）</p>
 							<div class="rn-i-div4">
 							<p class="rn-i-p3 fs12">剩余：2天</p>
-							<p class="rn-i-p4"><i>￥358</i><span>￥485</span></p>
+							<p class="rn-i-p4 fs12"><i>￥358</i><span>￥485</span></p>
 							</div>
 						</div>
 						<div class="col-sm-2 pull-right pd0">
@@ -93,7 +104,7 @@
 						</div>
 					</li>
 					<li class="col-sm-12 clearfix pull-left pd10 borderTop">
-						<div class="col-sm-4 border rn-i-div5 clearfix">
+						<div class="col-sm-4 border rn-i-div5 clearfix pd0">
 							<center><img class="img-responsive" src="img/phone.jpg"  /></center>
 						</div>
 						<div class="col-sm-6 rn-i-div6">
@@ -109,12 +120,16 @@
 					</li>
 				</ul>
 			</section>
-			<footer class="rn-i-footer">
-				<p>领取步骤：</p>
-				<p>第一步：本地购买商品并且完成支付；</p>
-				<p>第二步：在支付完成页面领取优惠券和选择特惠商品；</p>
-				<p>第三步：去合作商家使用。</p>
-			</footer>
 		</div>
 	</body>
+	<script>
+		function setTabs(name, m, n){
+			for(var i = 1; i <= n; i++){
+				var menu = document.getElementById(name + i);
+				var showDiv = document.getElementById("hide");
+				menu.className = i == m ? "rn-btn-active btn mr10" : "rn-fc-btn1 btn mr10";
+				showDiv.style.display = i == m ? "none" : "block";
+			}
+		};
+	</script>
 </html>
