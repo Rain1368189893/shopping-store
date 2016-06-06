@@ -164,7 +164,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 .rn-sc-div5{line-height:35px;}
 .rn-sc-div5 .rn-sc-div3{background-color: #bcbcbc;color: #fff;font-size: 1.6rem;}
 .rn-sc-div5 .rn-sc-div3 span{color: #d91648;}
+.rn-sc-div5 .rn-sc-div3 i{font-style: normal;}
 .rn-sc-div5 .rn-sc-div4{background-color: #d91648;font-size: 1.6rem;color: #fff;}
+.rn-sc-div1 img{height:150px;}
 
 /*支付完成页-优惠券*/
 .rn-btn-active{background-color: #d91648;color: #fff;}
@@ -212,7 +214,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 } 
  
 .chk_1:checked + label:after { 
-    content: '√';
+    content: url(../img/right.png);	
     position: absolute; 
     top: 0px; 
     left: 0px; 

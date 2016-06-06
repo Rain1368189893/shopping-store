@@ -22,10 +22,10 @@
 			</header>
 			<section>
 				<div class="swiper-container">
-				    <div class="swiper-wrapper">
-				        <div class="swiper-slide col-sm-4 pd0">
+				    <div class="swiper-wrapper">			    
+				        <div class="swiper-slide pd0" onclick="clickDiv(this)">
 			        			<div class="rn-sc-radio">
-								      <input name="rn-checkbox" class="chk_1" id="checkbox_a1" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a1"></label>
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a1" type="radio"><label for="checkbox_a1"></label>
 								 </div>
 					        	<div class=" rn-sc-div2">
 									<div class="rn-sc-div1">
@@ -36,9 +36,9 @@
 							    </div>
 				       </div>
 				       
-				       <div class="swiper-slide col-sm-4 pd0">
+				       <div class="swiper-slide  pd0" onclick="clickDiv(this)">
 			        			<div class="rn-sc-radio">
-								      <input name="rn-checkbox" class="chk_1" id="checkbox_a2" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a2"></label>
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a2" type="radio"><label for="checkbox_a2"></label>
 								 </div>
 					        	<div class=" rn-sc-div2">
 									<div class="rn-sc-div1">
@@ -49,9 +49,9 @@
 							    </div>
 				       </div>
 				       
-				       <div class="swiper-slide col-sm-4 pd0"> 
+				       <div class="swiper-slide  pd0" onclick="clickDiv(this)"> 
 			        			<div class="rn-sc-radio">
-								      <input name="rn-checkbox" class="chk_1" id="checkbox_a3" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a3"></label>
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a3" type="radio"><label for="checkbox_a3"></label>
 								 </div>
 					        	<div class=" rn-sc-div2">
 									<div class="rn-sc-div1">
@@ -62,9 +62,9 @@
 							    </div>
 				       </div>
 				       
-				       <div class="swiper-slide col-sm-4 pd0" >
+				       <div class="swiper-slide pd0" onclick="clickDiv(this)">
 			        			<div class="rn-sc-radio">
-								      <input name="rn-checkbox" class="chk_1" id="checkbox_a4" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a4"></label>
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a4" type="radio"><label for="checkbox_a4"></label>
 								 </div>
 					        	<div class=" rn-sc-div2">
 									<div class="rn-sc-div1">
@@ -75,9 +75,9 @@
 							    </div>
 				       </div>
 				       
-				       <div class="swiper-slide col-sm-4 pd0" >
+				       <div class="swiper-slide pd0" onclick="clickDiv(this)">
 			        			<div class="rn-sc-radio">
-								      <input name="rn-checkbox" class="chk_1" id="checkbox_a5" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a5"></label>
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a5" type="radio"><label for="checkbox_a5"></label>
 								 </div>
 					        	<div class=" rn-sc-div2">
 									<div class="rn-sc-div1">
@@ -95,7 +95,7 @@
 			</section>
 			<footer class="rn-sc-div5">
 				<div class="col-sm-8 rn-sc-div3 text-center">
-					<p>已选择<span id="text">0</span>/3件赠品</p>
+					<p>已选择<span id="text">0</span>/<i id="total"></i>件赠品</p>
 				</div>
 				<div class="col-sm-4 rn-sc-div4 text-center">
 					<p>确定</p>
@@ -107,23 +107,28 @@
 	<script>
 	    var swiper = new Swiper('.swiper-container', {
 	        pagination: '.swiper-pagination',
-	        slidesPerView: 3,
+	        slidesPerView: 3.5,
 	        paginationClickable: true,
 	        spaceBetween: 0,
 	        freeMode: true
 	    });
 		
-		var c = 0,limit = 3;
-		var text = document.getElementById('text');
-		function checkNum(obj){
-		obj.checked?c++:c--;
-		if(c > limit){
-			obj.checked = false;
-			alert("最多只能选择3项");
-			c--;
-		};
-		text.innerHTML = c;
-		};
+		var total = document.getElementById('total');
+		var num = document.getElementsByClassName('chk_1').length;
+		total.innerHTML = num;
+		
+		function clickDiv(obj){
+			var c = 0,limit = 1;
+			var text = document.getElementById('text');
+			var oRadio = obj.firstChild.nextSibling.children[0];
+			oRadio.checked = !oRadio.checked;
+			if(c > limit){				
+				obj.checked = false;
+			};
+			oRadio.checked ? c++ : c;
+			text.innerHTML = c;
+		}
+		
 		
     </script>
 </html>
