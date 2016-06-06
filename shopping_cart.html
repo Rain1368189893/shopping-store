@@ -24,8 +24,10 @@
 				<div class="swiper-container">
 				    <div class="swiper-wrapper">
 				        <div class="swiper-slide col-sm-4 pd0">
+			        			<div class="rn-sc-radio">
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a1" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a1"></label>
+								 </div>
 					        	<div class=" rn-sc-div2">
-					        		<div class="rn-sc-radio rn-sc-radio-active"></div>
 									<div class="rn-sc-div1">
 										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
 									</div>
@@ -35,8 +37,23 @@
 				       </div>
 				       
 				       <div class="swiper-slide col-sm-4 pd0">
+			        			<div class="rn-sc-radio">
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a2" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a2"></label>
+								 </div>
 					        	<div class=" rn-sc-div2">
-					        		<div class="rn-sc-radio"></div>
+									<div class="rn-sc-div1">
+										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
+									</div>
+									<p class="fs12">半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒半开盖保险盒、冰箱收纳盒500ml</p>
+									<p><span>￥0</span><i>￥30</i></p>
+							    </div>
+				       </div>
+				       
+				       <div class="swiper-slide col-sm-4 pd0"> 
+			        			<div class="rn-sc-radio">
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a3" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a3"></label>
+								 </div>
+					        	<div class=" rn-sc-div2">
 									<div class="rn-sc-div1">
 										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
 									</div>
@@ -46,8 +63,10 @@
 				       </div>
 				       
 				       <div class="swiper-slide col-sm-4 pd0" >
+			        			<div class="rn-sc-radio">
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a4" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a4"></label>
+								 </div>
 					        	<div class=" rn-sc-div2">
-					        		<div class="rn-sc-radio"></div>
 									<div class="rn-sc-div1">
 										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
 									</div>
@@ -55,9 +74,12 @@
 									<p><span>￥0</span><i>￥30</i></p>
 							    </div>
 				       </div>
+				       
 				       <div class="swiper-slide col-sm-4 pd0" >
+			        			<div class="rn-sc-radio">
+								      <input name="rn-checkbox" class="chk_1" id="checkbox_a5" type="checkbox" onclick="checkNum(this)"><label for="checkbox_a5"></label>
+								 </div>
 					        	<div class=" rn-sc-div2">
-					        		<div class="rn-sc-radio"></div>
 									<div class="rn-sc-div1">
 										<center class="border"><img class="img-responsive" src="img/box.jpg" /></center>		
 									</div>
@@ -65,13 +87,15 @@
 									<p><span>￥0</span><i>￥30</i></p>
 							    </div>
 				       </div>
+				       
+				       
 				    </div>
 				</div>  
 				 
 			</section>
 			<footer class="rn-sc-div5">
 				<div class="col-sm-8 rn-sc-div3 text-center">
-					<p>已选择<span>1</span>/3件赠品</p>
+					<p>已选择<span id="text">0</span>/3件赠品</p>
 				</div>
 				<div class="col-sm-4 rn-sc-div4 text-center">
 					<p>确定</p>
@@ -88,19 +112,39 @@
 	        spaceBetween: 0,
 	        freeMode: true
 	    });
-
-		var radio = document.getElementsByClassName('rn-sc-radio');	
-		console.log(radio)		
-		for(var item in radio){
-			console.log(radio[item])
-			radio[item].addEventListener('click',function(){
-			if(this.className.indexOf('rn-sc-radio-active') != -1){
-				this.className = 'rn-sc-radio';
-			}else{
-				this.className = 'rn-sc-radio rn-sc-radio-active';
-			}
-		},false);
-		}
+		
+		var c = 0,limit = 3;
+		var text = document.getElementById('text');
+		function checkNum(obj){
+		obj.checked?c++:c--;
+		if(c > limit){
+			obj.checked = false;
+			alert("最多只能选择3项");
+			c--;
+		};
+		text.innerHTML = c;
+		};
 		
     </script>
 </html>
+
+
+<!--function checkNum(){
+		var radio = document.getElementsByClassName('chk_1');
+		var text = document.getElementById('text');
+		var len = radio.length;
+		var i,j = 0;
+		for(i = 0;i < len; i++){
+			var item = radio[i];
+			if(item.checked && item.type == 'checkbox' && item.name == 'rn-checkbox'){
+				j++;				
+				if(j==4){
+					alert("最多只能选择3项");
+					return false;
+					break;
+				}
+			}			
+		}
+		alert(j)
+		text.innerHTML == j;
+		}-->

@@ -15,6 +15,15 @@
 	</head>
 	<body>
 		<div class="main">
+			
+			<!--二维码-->			
+			<div id="img1" class="rn-gc-img2 none">
+				<div class="rn-gc-img3 clearfix">
+					<img class="img-responsive"  src="img/code.jpg"  />
+					<div class="rn-gc-del" onclick="closeImg()">—</div>	
+				</div>
+			</div>
+			
 			<header class="rn-i-header">
 				<img class="rn-i-img pull-right" src="img/back.png"  />
 			</header>
@@ -43,7 +52,7 @@
 					</div>
 					<span class="col-sm-3 mt10 none pd0 ml5 pd0" id="hide">格式错误！</span>
 				</div>
-				<div class="col-sm-12 mt10">
+				<div class="col-sm-12 mt10" onclick="showImg()">
 					<div class="col-sm-6 rn-gc-btn2 pd0">
 						<button class="col-sm-12 text-center pd0">到合作商家使用优惠券</button>
 					</div>
@@ -79,6 +88,16 @@
 				hide.style.display = "none";
 				input1.style.border = "";
 			}
+		}
+		
+		function showImg(){
+			var img1 = document.getElementById('img1');
+			img1.style.display = "block";
+		}
+		
+		function closeImg(){
+			var img1 = document.getElementById('img1');
+			img1.style.display = "none";
 		}
 	</script>
 </html>

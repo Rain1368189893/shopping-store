@@ -182,8 +182,43 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
 .rn-gc-input input{line-height: 30px;outline: none;border: 1px solid #ccc;}
 .rn-gc-btn3 button{line-height: 30px;width:60px;}
 .rn-gc-img img{float: left;margin-left:-1px;height:33px}
+.rn-gc-img2{position: absolute;z-index: 5;width: 90%;margin:60% 5% 5%;}
+.rn-gc-img2 img{position: relative;margin:0 auto;z-index:6;width: 100%;}
+.rn-gc-del{width:25px;height:25px;border-radius:15px;color: #fff;background-color: #D91648;text-align: center;font-weight: bold;position: absolute;top:0;right:0px;z-index: 10;line-height: 25px;}
 
 /*复选框样式*/
-.rn-sc-radio{position: absolute;top:10px;right:10px;display: inline-block;vertical-align: top;width: 15px;height: 15px;border-radius: 10px;border: 1px solid #ccc;}
-.rn-sc-radio-active{border: 1px solid #d91648;background-color: #D91648;color: #fff;font-size: 1.2rem;line-height: 15px;text-align: center;}
-.rn-sc-radio-active:after{content: '√';}
+.rn-sc-radio{position: absolute;top:10px;right:10px;}
+.chk_1 { display: none; } 
+ .chk_1 + label { 
+	  width:15px;
+	  height:15px;
+    background-color: #FFF; 
+    border: 1px solid #C1CACA; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05); 
+    padding: 9px; 
+    border-radius: 10px; 
+    display: inline-block; 
+    position: relative; 
+} 
+.chk_1 + label:active { 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1); 
+} 
+ 
+.chk_1:checked + label { 
+    background-color: #d91648; 
+    border: 1px solid #d91648; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1); 
+    color: #000; 
+} 
+ 
+.chk_1:checked + label:after { 
+    content: '√';
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    color: #FFF; 
+    width: 100%; 
+    text-align: center; 
+    font-size: 1.0em; 
+    vertical-align: text-top; 
+}
